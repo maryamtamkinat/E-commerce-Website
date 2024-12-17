@@ -1,21 +1,15 @@
 "use client"
 
 import React, { useEffect } from "react";
-
-if (typeof window !== "undefined") {
-  const AOS = require("aos");
-  require("aos/dist/aos.css");
-}
+import AOS from 'aos'
+import "aos/dist/aos.css";
 
 const Hero = () => {
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const AOS = require("aos");
     AOS.init ({
       duration: 1000,
       once: true,
     })
-  }
 },
   []);
   return (
